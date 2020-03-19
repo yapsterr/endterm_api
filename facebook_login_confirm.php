@@ -23,7 +23,7 @@ if(isset($_GET['code']))
  }
 
  $_SESSION['user_id'] = '';
- $_SESSION['user_name'] = '';
+ $_SESSION['user_first_name'] = '';
  $_SESSION['user_email_address'] = '';
  $_SESSION['user_image'] = '';
 
@@ -38,7 +38,7 @@ if(isset($_GET['code']))
 
  if(!empty($facebook_user_info['name']))
  {
-  $_SESSION['user_name'] = $facebook_user_info['name'];
+  $_SESSION['user_first_name'] = $facebook_user_info['name'];
  }
 
  if(!empty($facebook_user_info['email']))
