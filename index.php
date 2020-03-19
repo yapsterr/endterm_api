@@ -29,9 +29,6 @@
 		    
 	<?php
 	if($login_button == ''){
-		if(isset($facebook_login_url)){
-            		echo '<div align="center">' .$facebook_login_url. '</div>';
-            		}else{
 	 switch ($load) {
 	 	case 'list':
 			require_once('list.php');
@@ -55,13 +52,39 @@
 			require_once('home.php');
 			break;
 		}
-	}
 	}else{
 	  echo '<div align="center">'.$login_button . '</div>';
 	}
 	?>
-		    
-	
+	<?php
+		if(isset($facebook_login_url)){
+            		echo '<div align="center">' .$facebook_login_url. '</div>';
+           		 }else{
+		 switch ($load) {
+	 		case 'list':
+				 require_once('list.php');
+				 break;
+			case 'detail':
+				 require_once('detail.php');
+				 break;
+			case 'categories':
+				require_once('categories.php');
+			    	break;
+        		case 'add':
+        			require_once('add.php');
+        			break;
+        		case 'update':
+            			require_once('update.php');
+				break;
+			case 'home':
+				require_once('home.php');
+				break;		
+			default:
+				require_once('home.php');
+				break;
+		}
+			}	
+	?>	
 		</div> 
 	  
 </div>
