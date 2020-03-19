@@ -8,7 +8,7 @@ $google_client->setClientId('887974993593-3focpalp8kaifvh2s7fp4i83l4orhv1p.apps.
 
 $google_client->setClientSecret('CucZTB8wspehhAYrOH8WbeYA');
 
-$google_client->setRedirectUri('http://localhost/api-enarle-yap/index.php');
+$google_client->setRedirectUri('https://api-enarle-yap.herokuapp.com/');
 
 $google_client->addScope('email');
 
