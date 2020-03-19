@@ -1,9 +1,9 @@
 <?php
   $load = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page'] : '';
  
+  include('google_login_confirm.php');
   if($login_button == true){
     include('facebook_login_confirm.php');
-    include('google_login_confirm.php');
   }
 ?>
 	<link rel="stylesheet" type="text/css" href="psalm/style.css">
@@ -29,6 +29,9 @@
 		    
 	<?php
 	if($login_button == ''){
+		if(isset($facebook_login_url)){
+            		echo '<div align="center">' .$facebook_login_url. '</div>';
+            		}else{
 	 switch ($load) {
 	 	case 'list':
 			require_once('list.php');
@@ -52,10 +55,10 @@
 			require_once('home.php');
 			break;
 		}
+	}
 	}else{
 	  echo '<div align="center">'.$login_button . '</div>';
-	  echo '<div align="center">' .$facebook_login_url. '</div>';
-	}    	    
+	}
 	?>
 		    
 	
