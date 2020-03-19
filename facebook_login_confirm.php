@@ -52,7 +52,7 @@ else
  // Get login url
     $facebook_permissions = ['email']; // Optional permissions
 
-    $facebook_login_url = $facebook_helper->getLoginUrl('https://api-enarle-yap.herokuapp.com/', $facebook_permissions);
+    $facebook_login_url = $facebook_helper->getLoginUrl('https://api-enarle-yap.herokuapp.com/index.php', $facebook_permissions);
     
     // Render Facebook login button
     $facebook_login_url = '<div align="center"><a href="'.$facebook_login_url.'"><img style="width: 300px;
