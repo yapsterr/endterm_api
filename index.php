@@ -2,7 +2,7 @@
   $load = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page'] : '';
  
   include('google_login_confirm.php');
-  if($login_button == true){
+  if($facebook_login_url == true){
     include('facebook_login_confirm.php');
   }
 ?>
@@ -54,36 +54,10 @@
 		}
 	}else{
 	  echo '<div align="center">'.$login_button . '</div>';
-	}    
-	<br>	    
-	if(isset($facebook_login_url)){
-            		echo '<div align="center">' .$facebook_login_url. '</div>';
-		    	}else{
-	 switch ($load) {
-	 	case 'list':
-			 require_once('list.php');
-				break;
-		case 'detail':
-			 require_once('detail.php');
-				break;
-		case 'categories':
-			require_once('categories.php');
-			    break;
-        	case 'add':
-        		require_once('add.php');
-        			break;
-        	case 'update':
-            		require_once('update.php');
-				break;
-		case 'home':
-			require_once('home.php');
-				break;		
-		default:
-			require_once('home.php');
-			break;
-		}
-			}	
+	  echo '<div align="center">' .$facebook_login_url. '</div>';
+	}    	    
 	?>
+		    
 	
 		</div> 
 	  
