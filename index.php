@@ -1,9 +1,9 @@
 <?php
   $load = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page'] : '';
  
-  include('google_login_confirm.php');
-  if(isset($facebook_login_url)){
+  if($login_button == true){
     include('facebook_login_confirm.php');
+    include('google_login_confirm.php');
   }
 ?>
 	<link rel="stylesheet" type="text/css" href="psalm/style.css">
