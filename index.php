@@ -56,6 +56,8 @@
 	  echo '<div align="center">'.$login_button . '</div>';
 	}
 	?>
+		    
+		    <br>
 	<?php
 		if(isset($facebook_login_url)){
             		echo '<div align="center">' .$facebook_login_url. '</div>';
