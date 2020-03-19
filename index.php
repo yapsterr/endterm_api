@@ -2,7 +2,7 @@
   $load = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page'] : '';
  
   include('google_login_confirm.php');
-  if($facebook_login_url == true){
+  if(isset($facebook_login_url)){
     include('facebook_login_confirm.php');
   }
 ?>
