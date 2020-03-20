@@ -53,7 +53,7 @@
 			break;
 		}
 	}else{
-	  echo '<div align="center">'.$facebook_login_url. '<br></div>';
+	  echo '<br><br><div align="center"><h1>Login using your</h1>'.$facebook_login_url. '<br><br> or</div>';
 	  echo '<div align="center">'.$login_button . '</div>';
 	}
 	?>
