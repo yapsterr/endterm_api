@@ -54,7 +54,7 @@
 		}
 	}else{
 	  echo '<br><div align="center"><h1>Login using your</h1>'.$facebook_login_url. '<br> or <br></div>';
-	  echo '<div align="center">'.$login_button . '</div>';
+	  echo '<br><div align="center">'.$login_button . '</div>';
 	}
 	?>
 		</div> 
