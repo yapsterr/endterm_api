@@ -7,7 +7,7 @@
 					
 					<!-- more menu -->
 					<ul class="menu">
-						<li><a>Email: <?php echo $_SESSION['user_email_address'] ?></a></li>
+						<li><a><?php echo $_SESSION['user_email_address'] ?></a></li>
 						<li><a href="logout.php">Log out</a></li>
 					</ul>
 				</div>
